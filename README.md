@@ -4,3 +4,5 @@
 
 &#x20;  Технологии: PHP, MySQL.
 
+&#x20;  Контакты проекта: lunarkiuri@gmail.com
+
