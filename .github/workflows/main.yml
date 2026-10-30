@@ -1,0 +1,11 @@
+name: Electronics Shop Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print test message
+        run: echo "Electronics shop workflow executed successfully!"
