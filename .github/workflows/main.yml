@@ -1,11 +1,26 @@
-name: Electronics Shop Workflow
+name: Electronics Shop Tests
 
 on:
+  push:
+    branches:
+      - develop
   workflow_dispatch:
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Print test message
-        run: echo "Electronics shop workflow executed successfully!"
+      - name: Get project files
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run first test
+        run: python test1.py
+
+      - name: Run second test
+        run: python test2.py
